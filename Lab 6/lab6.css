@@ -1,0 +1,23 @@
+.h{
+    color: orange;
+    font-size: 35px;
+    text-shadow: 2px 2px 2px black;
+    text-align: left;
+    margin-top: -60px;
+    margin-left: 15%;
+    font-style: italic;
+}
+h2{
+    font-size:medium;
+    margin-left: 16%;
+}
+
+a:link {color: orange;}
+a:hover {color: green;}
+a:focus{color: aqua;}
+main p:first-child{font-weight: bold;}
+main p:first-child::first-letter{font-size: 400%;}
+
+body {
+    font-family: sans-serif;
+}
