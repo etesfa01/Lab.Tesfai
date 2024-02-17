@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 2</title>
+    <style>
+        .h{
+            color: orange;
+            font-size: 40px;
+            text-shadow: 2px 2px 2px black;
+            text-align:center;
+            margin-top: -70px;
+            margin-left: 100px;
+        }
+        .s{
+            text-align: center;
+            margin-left: 100px;
+        }
+        footer{
+            text-align: right;
+        }
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+    </head>
+    <body>
+        <img src="../CSS/Lab_6/Lab_6/th.png" height="10%" width="10%">
+        <h1 class="h">San Joaquin Valley Town Hall</h1>
+        <h2 class="s"><i>Bringing cutting-edge speakers to the valley</i></h2>
+        <h1>This season's guest speakers</h1>
+        <ul>
+            <li>October: <u><b>Jeffrey Toobin</b></u></li>
+            <li>November: <u><b>Ross Sorkin</b></u></li>
+            <li>January: <u style="color: brown;"><b>Amy Chau</b></u></li>
+            <li>February: <u style="color: brown;"><b>Scott Smapson</b></u></li>
+            <li>March: <u style="color: brown"><b>Carlos Eire</b></u></li>
+            <li>April: <u style="color: brown"><b>Ronan Tynan</b></u></li>
+        </ul>
+        <h2>Looking for a unique gift?</h2>
+
+        <p>Town Hall has the answer. For only $100, you can get a book of tickets for all of the remaining speakers. And the bargain includes a second book of tickets for a companion.</p>
+        <p>&nbsp; &nbsp; Or, for $50, you can give yourself the gift of our speakers, and still get an extra ticket for a companion, but for just one of the events.</p>
+
+        <p>&nbsp; &nbsp; See you at the next show?</p>
+
+        <p><strong>Contact us by phone</strong> at (559) 555-1212 for ticket information.</p>
+        <footer>
+            &copy; Copyright 2015 San Joaquin Valley Town Hall.
+        </footer>
+    </body>
+</html>
