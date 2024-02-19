@@ -1,0 +1,32 @@
+body{
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+header {
+    padding: 10px; 
+}
+header p {
+    margin: 0; 
+    color: white; 
+    font-size: 24px; 
+}
+nav {
+    background-color: #444;
+    padding: 10px;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; 
+}
+
+nav ul li a {
+    color: white; 
+    text-decoration: none; 
+    font-size: 18px; 
+    margin-right: 20px;
+}
+nav ul li a:hover {
+    color: cyan;
+}

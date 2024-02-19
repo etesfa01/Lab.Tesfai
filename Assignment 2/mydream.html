@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dreams</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        #contact-page {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid blanchedalmond;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid gray;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: dimgray;
+            color: white;
+        }
+    </style>
+</head>
+<body style="display: flex;
+flex-direction: column;
+background-color:gainsboro;">
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutme.html">About Me</a></li>
+            <li><a href="#">My Dreams</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>My Dreams and Aspirations</h2>
+        <section>On a personal level, I dream of establishing a foundation dedicated to providing free prosthetics and technological aids to
+             underserved communities worldwide. Driven by a passion for equality, I, as a visionary prosthetic technician and computer programmer, envision 
+             a world where every individual, regardless of circumstance, has the opportunity to embrace life's possibilities with newfound confidence and 
+             mobility. In the symphony of ones and zeros, and the delicate hum of crafting prosthetic limbs, I find the melody of my aspirations 
+             harmonizing with the rhythm of a future where technology becomes a catalyst for positive change on a global scale.
+        </section>
+        <hr>
+        <div id="contact-page">
+            <h2>Contact Me</h2>
+            <p>If you have any questions or would like to get in touch, feel free to reach out using the form below:</p>
+
+            <form action="#" method="post">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="4" placeholder="Write your message here..." required></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </main>
+    <br>
+    <footer style="text-align: center;
+    background-color:dimgray;
+    color: white;
+    padding: 10px;">
+        <p>&copy; 2024 Eden's website</p>
+    </footer>
+</body>
+</html>
