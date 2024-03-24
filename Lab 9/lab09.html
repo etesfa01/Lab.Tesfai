@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <p id="lab9">Lab 9</p>
+
+        <script>
+            //1. Initialize an empty inventory object
+            const inventory = {};
+            //2. Function to add product
+            function addProduct(productId, name, quantity) {  
+                inventory[productId] = {productId, name, quantity};
+                console.log("Product with ID# " + productId + " was added to inventory.");
+            }
+    
+            //3. Display the inventory
+            function displayInventory(){
+                let inventoryList = "Inventory: <br>ID\tName\tQuantity<br>";
+                for(let productId in inventory){
+                    inventoryList += inventory[productId].productId + "\t" + inventory[productId].name + "\t" + inventory[productId].quantity + "<br>";
+                }
+                document.getElementById("lab9").innerHTML = inventoryList;
+            }
+
+            //4. Find product by ID
+            function findProduct(productId){
+                if(productId in inventory){
+                    console.log("Product:");
+                    console.log("ID: " + productId);
+                    console.log("Name: " + inventory[productId].name);
+                    console.log("Quantity: " + inventory[productId].quantity);
+                }else{
+                    console.log("Product with ID# " + productId + " not found.")
+                }
+            }
+
+            //Checking if it works:
+            addProduct(1, "Impact Driver", 10);
+            addProduct(2, "Hammer", 5);
+            addProduct(3, "Countersink", 12);
+            displayInventory();
+            findProduct(2);
+            findProduct(5);
+        </script>
+    </body>
+</html>
