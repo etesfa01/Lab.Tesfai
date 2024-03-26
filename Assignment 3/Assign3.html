@@ -1,1 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>
+      Assign 3
+    </title>
+    </head>
+    <body>
+        <p id="lab9">Lab 9</p>
 
+        <script>
+            //1. Initialize inventory
+            const inventory = [
+                {productId: 1, name: 'Wrench', price:20, quantity: 12},
+                {productId: 2, name: 'Hand-Saw', price:30, quantity: 2},
+                {productId: 3, name: 'Pliers', price:60, quantity: 4},
+                {productId: 4, name: 'Screwdriver', price:30, quantity: 20},
+                {productId: 5, name: 'Toolbox', price:117, quantity: 7}
+            ];
+            
+            //2. Function to add product
+            function addProduct() {  
+                let productId = prompt("Enter product ID:");
+                let name = prompt("Enter product name:");
+                let price = prompt("Enter product price:");
+                let quantity = prompt("Enter product quantity:");
+
+                productId = Number(productId);
+                price = Number(price);
+                quantity = Number(quantity);
+                //inventory[productId] = {productId, name, quantity};
+                //console.log("Product with ID# " + productId + " was added to inventory.");
+
+                const newProduct = { productId: productId, name: name, price: price, quantity: quantity};
+                inventory.push(newProduct);
+
+                console.log("Product added successfully.");
+            }
+
+            //3. Remove Product Functionality:
+            function removeProduct(){
+                let idRemoval = prompt("Enter product ID to remove:");
+                idRemoval = Number(idRemoval);
+                let foundId = -1;
+
+                for (let i = 0; i < inventory.length; i++){
+                    if (inventory[i].productId === idRemoval){
+                        foundId = i;
+                        break; //to stop searching if id has been found
+                    }
+                }
+                if (foundId !== -1){
+                    inventory.splice(foundId, 1);
+                    console.log("Product removed successfully.");
+                }else {
+                    console.log("Product not found.");
+                }
+            }
+
+            //4. Display the inventory
+            function displayInventory(){
+                console.log("Inventory List:");
+                for (let i = 0; i < inventory.length; i++){
+                    const product = inventory[i];
+                    console.log(`ID: ${product.productId}, Name: ${product.name}, Price: $${product.price}, Quantity: ${product.quantity}`);
+                }
+            }
+
+            //5. Calculate Total Value
+            function calculateTotalValue(){
+                let totalValue = 0;
+                for (let i = 0; i < inventory.length; i++){
+                    const product = inventory[i];
+                    totalValue += product.price * product.quantity;
+                }  
+                console.log(`Total Inventory Value: $${totalValue}`);
+            }
+            //6. Function to display low stock
+            function displayLowStockAlerts(threshold) {
+                console.log("Low Stock Alerts:");
+                for (let i = 0; i < inventory.length; i++){
+                    const product = inventory[i];
+                    if (product.quantity < threshold) {
+                        console.log(`Low stock alert for ${product.name}. Quantity: ${product.quantity}`);
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>
