@@ -1,10 +1,3 @@
-document.addEventListener("DOMContentLoaded", function() {
-// let changeTextBtn = document.getElementById("changeTextBtn");
-// let paragraph = document.getElementById("message");
-// changeTextBtn.addEventListener("click", function(){
-//     paragraph.textContent = "Text changed successfully!";
-// });
-
 document.getElementById("changeTextBtn").addEventListener("click", function() {
     document.getElementById("message").textContent = "Text changed successfully!";
 });
@@ -15,10 +8,7 @@ document.body.style.backgroundColor = randomColor();
 // append new paragraph:
 const para = document.createElement("p");
 para.textContent = "New paragraph added dynamically!";
-//const node = document.createTextNode("New paragraph added dynamically!");
-//para.appendChild(node);
 document.getElementById("container").appendChild(para);
-});
 
 // Function to generate a random color
 // function randomColor() {
