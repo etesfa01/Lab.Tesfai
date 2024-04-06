@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment 4</title>
+    </head>
+    <body>
+        <div id="container">
+            <p><strong>Country:</strong></p>
+            <p>CANADA</p>
+            <p><b>Capital:</b></p>
+            <p id="capital">OTTAWA</p>
+            <button id="hide">Hide capital name</button><br><br>
+            <button id="show">Show capital name</button><br><br>
+            <button id="toggle">Toggle</button>
+            <p id="hover"><b>Hover on this paragraph for Yellow</b></p>
+            <p id="clickP"><b>Click on this paragraph for Green example</b></p>
+        </div>
+
+        <script>
+            const capitalElement = document.getElementById("capital");
+            const hideButton = document.getElementById("hide");
+            const showButton = document.getElementById("show");
+            const toggleButton = document.getElementById("toggle");
+            const hoverParagraph = document.getElementById("hover");
+            const clickParagraph = document.getElementById("clickP");
+
+            hideButton.addEventListener("click", function() {
+                capitalElement.textContent = "";
+            });
+            showButton.addEventListener("click", function() {
+                capitalElement.textContent = "OTTAWA";
+            });
+            toggleButton.addEventListener("click", function() {
+                if (capitalElement.textContent === "OTTAWA"){
+                    capitalElement.textContent = "";
+                }else {
+                    capitalElement.textContent = "OTTAWA";
+                }
+            });
+            hoverParagraph.addEventListener("mouseover", function() {
+                document.body.style.backgroundColor = "yellow";
+                //not sure if you wanted body or paragraph background to be changed
+                //if for paragraph only, then:
+                //hoverParagraph.style.backgroundColor = "yellow";
+            });
+            hoverParagraph.addEventListener("mouseout", function() {
+                document.body.style.backgroundColor = "";
+            });
+            clickParagraph.addEventListener("click", function() {
+                document.body.style.background = "green";
+            });
+
+        </script>
+    </body>
+</html>
